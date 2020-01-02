@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compartible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/hello.css' %}"/>
+    <title>DarknessWorld</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="block-content">
+        <div class="active-part">
+          <img class="flexible-image" src="../../static/img/first_loc3.jpg" alt="">
+        </div>
+      </div>
+      <div class="conteiner-text">
+        <div class="text">Вы очнулись в пустой таверне.
+           Вы не помните, как сюда попали и что было до этого.
+           Посмотрев в окно,вы поняли, что сейчас примерно полдень.
+         </div>
+         <div class="action">Что будете делать?</div>
+         <div class="choose">
+           <a src="/inventory/" class="choice">Проверить вещи в сумке</a>
+           <a class="choice">Выйти из таверны</a>
+         </div>
+      </div>
+    </div>
+    {% if ShowInventory %}
+      <div class="inventory">
+
+      </div>
+    {% endif %}
+  </body>
+</html>
